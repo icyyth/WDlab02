@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Gear | Đặt hàng</title>
+</head>
+<body bgcolor="#F4F6F8">
+
+    <!-- Header / Banner -->
+    <table bgcolor="#1E3A8A" border="0" cellpadding="20" cellspacing="0" width="100%">
+        <tr>
+            <td align="center">
+                <font color="#FFFFFF" size="6"><b> URBAN GEAR</b></font><br>
+                <font color="#FCD34D" size="4">BỀN BỈ MỖI NGÀY - ĐỒNG HÀNH MỌI NƠI</font><br>
+                <font color="#E5E7EB" size="2">Cửa hàng Balo & Túi xách mẫu </font>
+            </td>
+        </tr>
+    </table>
+
+    <!-- Menu Điều hướng -->
+    <table bgcolor="#DBEAFE" border="0" cellpadding="12" cellspacing="0" width="100%">
+        <tr>
+            <td align="center">
+                <nav aria-label="Điều hướng chính">
+                    <a href="index.html">Trang chủ</a> |
+                    <a href="index.html#san-pham">Sản phẩm</a> |
+                    <a href="chi-tiet.html">Chi tiết</a> |
+                    <a href="bang-gia.html">Bảng tổng hợp</a> |
+                    <a href="dat-hang.html">Đặt hàng mẫu</a>
+                </nav>
+            </td>
+        </tr>
+    </table>
+
+    <!-- Form Đặt Hàng -->
+    <h1 align="center">Đặt hàng mẫu</h1>
+    <p align="center"><i>Vui lòng điền thông tin bên dưới (Các trường có dấu * là bắt buộc)</i></p>
+
+    <form action="xac-nhan.html" method="get">
+        <table align="center" bgcolor="#FFFFFF" border="1" cellpadding="20" cellspacing="0" width="60%">
+            <tr>
+                <td>
+                    <fieldset>
+                        <legend><strong>Thông tin người đặt</strong></legend>
+                        <p>
+                            <label for="ten">Họ tên *</label><br>
+                            <input autocomplete="name" id="ten" maxlength="60" minlength="2" name="hoTen" placeholder="Nguyen Van A" required type="text" size="40">
+                        </p>
+                        <p>
+                            <label for="email">Email *</label><br>
+                            <input autocomplete="email" id="email" name="email" placeholder="demo@example.com" required type="email" size="40">
+                        </p>
+                        <p>
+                            <label for="phone">Điện thoại (chỉ nhập số)</label><br>
+                            <input id="phone" name="phone" placeholder="0900000000" type="tel" size="40">
+                        </p>
+                    </fieldset>
+
+                    <br>
+
+                    <fieldset>
+                        <legend><strong>Chi tiết sản phẩm</strong></legend>
+                        <p>
+                            <label for="product">Mẫu sản phẩm *</label><br>
+                            <select id="product" name="maSanPham" required>
+                                <option value="">-- Chọn sản phẩm --</option>
+                                <option value="SP01">SP01 - Balo Laptop Urban (550.000 đ)</option>
+                                <option value="SP02">SP02 - Túi xách Classic Brown (700.000 đ)</option>
+                                <option value="SP03">SP03 - Balo Sport Green (390.000 đ)</option>
+                                <option value="SP04">SP04 - Túi Đeo Chéo Black (290.000 đ)</option>
+                                <option value="SP05">SP05 - Balo Du Lịch Grey (850.000 đ)</option>
+                                <option value="SP06">SP06 - Túi Tote Canvas (190.000 đ)</option>
+                                <option value="SP07">SP07 - Balo Chống Nước Red (600.000 đ)</option>
+                                <option value="SP08">SP08 - Túi Xách Da Black (1.050.000 đ)</option>
+                                <option value="SP09">SP09 - Balo Mini Pink (320.000 đ)</option>
+                                <option value="SP10">SP10 - Túi Đeo Chéo Sport (250.000 đ)</option>
+                            </select>
+                        </p>
+                        <p>
+                            <label for="size">Kích thước / Phân loại *</label><br>
+                            <select id="size" name="size" required>
+                                <option value="">-- Chọn kích thước --</option>
+                                <option value="S">Nhỏ (S)</option>
+                                <option value="M">Vừa (M)</option>
+                                <option value="L">Lớn (L)</option>
+                                <option value="15.6">Vừa 15.6 inch</option>
+                            </select>
+                        </p>
+                        <p>
+                            <label for="quantity">Số lượng (1-5)</label><br>
+                            <input id="quantity" max="5" min="1" name="soLuong" required step="1" type="number" value="1">
+                        </p>
+                        
+                        <fieldset>
+                            <legend>Hình thức nhận hàng</legend>
+                            <label><input name="giaoHang" required type="radio" value="tai-cua-hang"> Nhận tại cửa hàng</label><br>
+                            <label><input name="giaoHang" type="radio" value="giao-tan-noi"> Giao tận nơi</label>
+                        </fieldset>
+                        
+                        <p>
+                            <label for="note">Ghi chú thêm</label><br>
+                            <textarea cols="45" id="note" maxlength="300" name="ghiChu" placeholder="Ghi chú đơn hàng (không bắt buộc)" rows="4"></textarea>
+                        </p>
+                    </fieldset>
+
+                    <br>
+                    
+                    <p>
+                        <label>
+                            <input name="dongY" required type="checkbox" value="yes"> 
+                            Tôi hiểu đây chỉ là form thực hành, không tạo đơn hàng thật *
+                        </label>
+                    </p>
+                    
+                    <p align="center">
+                        <button type="submit" style="padding: 10px 20px; font-size: 16px;">Gửi yêu cầu mẫu</button>
+                        &nbsp;&nbsp;
+                        <button type="reset" style="padding: 10px 20px; font-size: 16px;">Nhập lại</button>
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <br>
+
+    <!-- Footer -->
+    <table bgcolor="#1E3A8A" width="100%" cellpadding="15" cellspacing="0" border="0">
+        <tr>
+            <td align="center">
+                <font color="white">
+                    <b>◆ URBAN GEAR</b> · 10 sản phẩm demo ·  2026
+                </font>
+                <br/>
+               
+                <a href="index.html"><font color="#FFDC91">↑ Quay lại trang chủ</font></a>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>
